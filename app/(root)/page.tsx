@@ -4,7 +4,7 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import DemoVisualization from "@/components/Demo";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/Testimonials";
 
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Bar */}
-      <Navbar />
+     
       {/* Hero Section */}
       <Hero />
 

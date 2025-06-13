@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ArrowRight, ChefHat, Utensils } from "lucide-react";
+import Link from "next/link";
 
 interface HeroSectionProps {
     onGetRecipes?: (ingredients: string) => void;
@@ -51,10 +52,13 @@ const Hero = ({ onGetRecipes = () => { } }: HeroSectionProps) => {
                                 onChange={(e) => setIngredients(e.target.value)}
                             />
                             <Button
-                                type="submit"
+                                //type="submit"
                                 className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 flex items-center gap-2"
                             >
+                                <Link href={`/recipes/new`}>
                                 Get Recipes
+                                </Link>
+                                
                                 <ArrowRight size={18} />
                             </Button>
                         </form>
