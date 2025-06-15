@@ -44,13 +44,13 @@ const Hero = ({ onGetRecipes = () => { } }: HeroSectionProps) => {
                             onSubmit={handleSubmit}
                             className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto md:mx-0"
                         >
-                            {/* <Input
+                            <Input
                                 type="text"
                                 placeholder="Enter ingredients (e.g., eggs, spinach, cheese)"
                                 className="flex-grow text-base py-6 border-amber-200 focus:border-amber-400 bg-white"
                                 value={ingredients}
                                 onChange={(e) => setIngredients(e.target.value)}
-                            /> */}
+                            />
                             <Button
                                 //type="submit"
                                 className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 flex items-center gap-2"
