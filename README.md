@@ -8,7 +8,7 @@ An interactive recipe web app that uses **Google Gemini**, **Supabase**, and **V
 
 - 🎙️ **Voice-Guided Cooking** – Step-by-step cooking instructions via voice
 - 🧠 **AI Recipe Generation** – Recipes generated based on user’s ingredients, preferences, and constraints using Gemini
-- 🗃️ **Supabase Database** – Stores user-generated recipes and links them using foreign keys
+- 🗃️ **Supabase Database** – Stores user-generated recipes.
 - 🌐 **Modern Tech Stack** – Built with Next.js, Supabase, and Vapi AI
 - 🎨 **Responsive UI** – Clean interface to view, submit, and follow recipes
 
