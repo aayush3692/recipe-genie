@@ -27,3 +27,15 @@ An interactive recipe web app that uses **Google Gemini**, **Supabase**, and **V
    ```bash
    npm install
    ```
+
+3. Setup your environment variables
+   ```bash
+   GOOGLE_GEMINI_API_KEY=your_gemini_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+VAPI_API_KEY=your_vapi_key
+```
+4. Run the project
+```bash
+npm run dev```
+
