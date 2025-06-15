@@ -24,6 +24,9 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { createdGeneratedRecipe, createRecipe } from "@/lib/actions/recipes.actions";
+import { redirect, useRouter } from "next/navigation";
+import { generateRecipe } from "@/lib/gemini";
 
 const formSchema = z.object({
     ingredients: z.string().min(1, "Please enter at least one ingredient"),
@@ -39,6 +42,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const RecipeForm = () => {
+    const router = useRouter();
     const form = useForm<FormData>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -53,10 +57,31 @@ const RecipeForm = () => {
         },
     });
 
-    const onSubmit = (data: FormData) => {
-        console.log("Form submitted:", data);
-        // Here you would typically send the data to your AI recipe generator API
-        alert("Recipe generation request submitted! (This is a demo)");
+    const onSubmit = async (data: FormData) => {
+       
+        const recipe = await createRecipe(data);
+        const gemini = await generateRecipe(data);
+       
+        if (gemini) {
+            const cleaned = gemini
+                .replace(/```json/, '')   // remove opening backticks and label
+                .replace(/```/, '')       // remove closing backticks
+                .trim();
+
+            
+            const obj = JSON.parse(cleaned);
+            // console.log(obj);
+            const generatedRecipe = await createdGeneratedRecipe(recipe.id, obj);
+        }
+        
+        // console.log(recipe, "database");
+
+        if (recipe) {
+            router.push(`/recipes/${recipe.id}`);
+        } else {
+            console.log('failed to create a recipe');
+            redirect('/')
+        }
     };
 
     const dietaryOptions = [

@@ -60,11 +60,16 @@ const Navbar = () => {
                             variant="outline"
                             className="border-orange-500 text-orange-600 hover:bg-orange-50 mr-2"
                         >
+                            <Link href='/sign-in'>
                             Login
+                            </Link>
+                            
                         </Button>
                         <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                           <Link href='/sign-up'>
                             Sign Up
-                        </Button>
+                            </Link>
+                            </Button>
                     </div>
 
                     {/* Mobile menu button */}

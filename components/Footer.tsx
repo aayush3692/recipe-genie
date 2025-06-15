@@ -76,45 +76,14 @@ const Footer = () => {
                                     Blog
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:text-white transition"
-                                >
-                                    Careers
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:text-white transition"
-                                >
-                                    Contact
-                                </a>
-                            </li>
+                    
                         </ul>
                     </div>
 
                     {/* Column 4 */}
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Legal</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:text-white transition"
-                                >
-                                    Terms of Service
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-gray-300 hover:text-white transition"
-                                >
-                                    Privacy Policy
-                                </a>
-                            </li>
+                        <ul className="space-y-2">                            
                             <li>
                                 <a
                                     href="#"
@@ -137,7 +106,7 @@ const Footer = () => {
 
                 <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
                     <p>
-                        &copy; {new Date().getFullYear()} AI Recipe Generator. All rights
+                        &copy; {new Date().getFullYear()} Recipe Genie. All rights
                         reserved.
                     </p>
                 </div>
